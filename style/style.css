@@ -56,7 +56,7 @@ p{
     font-size: 13px;
     font-weight: 600;
     color: hsl(0, 0%, 70%);
-    
+
     bottom: 1px;
 }
 
@@ -94,13 +94,14 @@ ul li:hover{
     color: #1F1F1F;
     transition: 0.5s background-color ease;
 }
-li > a{
+
+a > li{
     font-weight: 500;
     font-family: "Inter", sans-serif;
     text-decoration: none;
     color: white;
 }
-li:hover > a{
+ul:hover > a{
     text-decoration: none;
     color: hsl(0, 0%, 12%);
     transition: 0.5s color ease;
