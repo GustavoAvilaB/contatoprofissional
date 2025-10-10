@@ -1,0 +1,106 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+main{
+    background-color: #141414;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section{
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #1F1F1F;
+    height: auto;
+    min-width: 10vw;
+    max-width: 19vw;
+}
+section > p.texto{
+    font-size: 12px;
+    margin: 24px 0px 0px 0px;
+    color: rgb(185, 185, 185);
+}
+
+img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+p{
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+#Email{
+    font-size: 13px;
+    font-weight: 600;
+    color: hsl(0, 0%, 70%);
+    margin: 0px;
+}
+
+#Nome{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0px;
+}
+#Endereco{
+    font-size: 12px;
+    font-weight: 200px;
+    color: hsl(75, 94%, 57%);
+    margin: 0px;
+}
+ul{
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
+}
+
+ul li{
+    border-radius: 10px;
+    font-size: 13px;
+    margin: 10px auto;
+    background-color: hsl(0, 0%, 20%);
+    color: hsl(0, 0%, 12%);
+    padding: 14px;
+    margin-top: auto;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+ul li:hover{
+    background-color: hsl(75, 94%, 57%);
+    cursor: pointer;
+    color: #1F1F1F;
+    transition: 0.5s background-color ease;
+}
+li > a{
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+    color: white;
+}
+li:hover > a{
+    text-decoration: none;
+    color: hsl(0, 0%, 12%);
+    transition: 0.5s color ease;
+}
