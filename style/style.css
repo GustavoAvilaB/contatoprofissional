@@ -26,11 +26,11 @@ main{
 
 section{
     text-align: center;
-    padding: 20px;
+    padding: 20px 50px;
     border-radius: 20px;
     background-color: #1F1F1F;
     height: auto;
-    width: 330px;
+    width: 380px;
     position: absolute;
 }
 section > p.texto{
