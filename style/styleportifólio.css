@@ -115,8 +115,7 @@ section.carros:hover{
     box-shadow: 0px -1px 20px 2px #700a0a;
     transition: 1s;
 }
-
-.spanquiz button{
+.carrospan button:hover{
     padding: 14px 25px;
     border: none;
     margin: 5px;
@@ -128,7 +127,16 @@ section.carros:hover{
     cursor: pointer;
 }
 
+
 .spanquiz button:hover{
+    cursor: pointer;
+    padding: 14px 25px;
+    border: none;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #fff;
+    transition: all 1s ease;
     cursor: pointer;
     background-color: #331F19;
     color: #798252;
