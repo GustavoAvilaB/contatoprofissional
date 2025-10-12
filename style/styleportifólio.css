@@ -12,30 +12,50 @@
 }
 
 main{
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 24px;
     padding: 32px;
     background-image: linear-gradient(-95deg, #000000, #44014d);
     font-family: 'Inter', sans-serif;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    display: flex;
+    align-items: center;
 }
-
+/*SECTION PRINCIPAL*/
 section{
+    font-weight: 700;
     max-width: 25rem;
-    height: 38.75rem;
+    height: 37.75rem;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flexbox;
+    position: relative;
+    transition: all 1s ease;
+    text-align: justify;
 }
 
 
-section.Batmansessao:hover{
-    box-shadow: 0 0px 20px rgba(189, 1, 1, 0.712);
+
+section:hover{
     max-width: 26.25rem;
     height: 39.75rem;
+    transition: all 1s ease;
+    
+}
+/*SESSAO DO BATMAN*/
+section.Batmansessao{
+    font-size: 24px;
+    font-weight: 700;
+    color: #8D9AA6;
+    background-color: #000; 
+    transition: all 1s ease;
+}
+
+section.Batmansessao:hover{
+    box-shadow: 0 0px 20px rgba(189, 1, 1, 0.712);
     background-color: rgb(150, 0, 0);
     transition: all 0.5s ease; 
     background-image: url(/imagens/fotosdoportifólio/245865.png);
@@ -43,26 +63,6 @@ section.Batmansessao:hover{
     background-position: 100% 63%;
     background-repeat: no-repeat;
     background-size: contain;
-}
-section:hover{
-    max-width: 26.25rem;
-    height: 39.75rem;
-    transition: all 1s ease;
-    
-}
-
-section.Batmansessao{
-    font-size: 24px;
-    font-weight: 700;
-    color: #8D9AA6;
-    background-color: #000; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    transition: all 1s ease;
 }
 
 section.Batmansessao span{
@@ -79,67 +79,38 @@ section.Batmansessao span{
     gap: 20px;
     align-items: center;
 }
-
+/*SESSAO DAS RECEITAS*/
 section.receitassessao{
-    font-weight: 700;
     color: #854632;
     background-color: #F3E6D8; 
-    display: inline-block;
-    position: relative;
-    transition: all 1s ease;
-    text-align: justify;
 }
 section.receitassessao:hover{
     box-shadow: 0 0px 20px #F3E6D8;
-    transform: scale(1);
     background-color: #FFF5F9;
     transition: all 0.5s ease; 
-    z-index: 1;
 }
-
+/*SESSAO DOS CARROS*/
 section.carros{
-    font-weight: 700;
     color: #7B284F;
     background-image: radial-gradient(#db55dbb6, #8000ff);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
     transition: all 1s ease;
-
 }
 section.carros:hover{
-    transform: scale(1);
     color: #d3d3d3;
     background-image: linear-gradient(#db0909, #5f0000);
     box-shadow: 0px -1px 20px 2px #700a0a;
-    transition: 1s;
+    transition: all 1s ease;
 }
 .carrospan button:hover{
     padding: 14px 25px;
-    border: none;
+    border: solid 1px goldenrod;
     margin: 5px;
     border-radius: 5px;
     font-size: 1rem;
-    background-color: #000B0D;
+    background-color: #770000;
     color: #fff;
     transition: all 1s ease;
     cursor: pointer;
-}
-
-
-.spanquiz button:hover{
-    cursor: pointer;
-    padding: 14px 25px;
-    border: none;
-    margin: 5px;
-    border-radius: 5px;
-    font-size: 1rem;
-    color: #fff;
-    transition: all 1s ease;
-    cursor: pointer;
-    background-color: #331F19;
-    color: #798252;
 }
 
 span.receitas, span.carrospan, .spanquiz{
@@ -152,15 +123,27 @@ span.receitas, span.carrospan, .spanquiz{
     gap: 15px;
     flex-direction: column;
 }
+/*SESSAO DO QUIZ*/
  section.quiz{
-    display: flex;
-    gap: 15px;
     flex-direction: column;
     font-weight: 700;
     background-color: #E6E2D3; 
     color: #331F19;
     transition: all 1s ease;
  }
+ .spanquiz button:hover{
+    cursor: pointer;
+    padding: 14px 25px;
+    border: none;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #fff;
+    transition: all 1s ease;
+    cursor: pointer;
+    background-color: #331F19;
+    color: #798252;
+}
  section.quiz:hover{
     box-shadow: 0px 0px 20px #CCD595;
  }
@@ -187,9 +170,6 @@ span button{
     color: #fff;
     transition: all 1s ease;
     cursor: pointer;
-    display: flex;
-    justify-content: end;
-    
 }
 
 section.Batmansessao button:hover{
@@ -208,7 +188,7 @@ span.receitas button:hover{
 }
 section img{
     width: 100%;
-    height: 290px;
+    height: 50%;
     margin-bottom: 20px;
     object-fit: cover;
     border-radius:10px 10px 0 0;
@@ -260,7 +240,31 @@ a img.voltar:hover{
     }
 }
 
-@media (max-width: 420px){
-    section{padding-bottom: 110px}
-    section span{font-size: 13px}
+@media (max-width: 450px){
+
+    section.Batmansessao:hover{
+    background-position: 100% 53%;
+}
+
+
+    section{
+        width: 85%;
+        height: auto;
+        font-size: 20px;
+        transition: all 1s ease;
+        transition-delay: 100ms;
+    }
+    section:hover{
+        width: 87%;
+        height: 580px;
+        
+    }
+
+    section img{
+        position: cover;
+    }
+
+    section span{
+        margin: 50px 0px 0 0;
+    }
 }
