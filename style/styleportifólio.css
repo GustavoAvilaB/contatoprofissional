@@ -138,8 +138,6 @@ span.receitas, span.carrospan, .spanquiz{
 }
 /*SESSAO DO QUIZ*/
  section.quiz{
-    flex-direction: column;
-    font-weight: 700;
     background-color: #E6E2D3; 
     color: #331F19;
     transition: all 1s ease;
@@ -168,13 +166,7 @@ span.receitas, span.carrospan, .spanquiz{
   pointer-events: auto; /* garante que botões dentro possam ser clicados */
 }
 
-span p {
-    width: 16rem;
-    height: auto;
-    margin: 10px;
-    text-align: justify;
-    text-align: center;
-}
+
 section.receitassessao, section.carros, span.spanquiz, .batmanspan .texto{
     margin: 15px;
     font-size: 1.2rem;
@@ -243,14 +235,8 @@ a img.voltar:hover{
         opacity: 1;
         text-align: center;
         pointer-events: auto;
-        transition-delay: 0.4s;
-        text-align: center;
-            section:hover span{
-            opacity: 1;
-            text-align: center;
-            pointer-events: auto;
-            transition-delay: 0.4s;
-            text-align: center;
+        transition-delay: 0.4s; 
+
     }
     section.carros button{
         margin-top: 70px;
@@ -271,8 +257,6 @@ a img.voltar:hover{
         margin: auto;
     }
 
-
-}
 
 }
 
@@ -303,13 +287,7 @@ a img.voltar:hover{
     section.Batmansessao:hover{
     background-position: 100% 53%;
 }
-    section.Batmansessao.is-active,
-    section.Batmansessao:hover {
-    background-image: url("imagens/fotos do portifólio/245865.png");
-    background-size: cover;
-    background-position: center center;
-    }
-    section.Batmansessao:hover span button{
+    section.Batmansessao.is-active,section.Batmansessao:hover span button{
     width: 80px;
     height:40px;
     padding: 0px;
@@ -322,10 +300,13 @@ a img.voltar:hover{
     padding: 0px;
     }
      
-  section.Batmansessao {
+  section.Batmansessao.is-active {
     background-size: cover;       /* mantém cover (esconde áreas vazias) */
     min-height: 220px;   
-    background-position: 70% 30%;         /* garante espaço visível para a imagem */
+    background-position: 70% 30%;
+    background-image: url("imagens/fotosdoportifólio/245865.png");
+    opacity: 0;
+    transition: all 1s ease;
   }
 }
 
@@ -386,14 +367,10 @@ a img.voltar:hover{
         width: 100%;
         height: 200px;
         border-radius: 3px;
+        position: absolute;
     }
  
     section:hover{
         width: 90%;
         height: 500px;
-    }
-
-    section img{
-        position: absolute;
-        
     }
