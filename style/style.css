@@ -32,8 +32,7 @@ section{
     border-radius: 20px;
     background-color: #1F1F1F;
     height: auto;
-    max-width: 23rem;
-    width: min(420px, 90%); 
+    max-width: 380px;
     margin: 40px auto; 
     box-sizing: border-box;
 }
@@ -48,8 +47,8 @@ width: clamp(64px, 18vw, 90px);
 height: clamp(64px, 18vw, 90px);
 border-radius: 50%;
 object-fit: cover;
-margin-top: 20px;
-margin-bottom: 20px;
+display: block;
+margin: auto;
 }
 
 p{
@@ -69,7 +68,8 @@ p{
 #Nome{
     font-size: 20px;
     font-weight: 600;
-    margin: 0px;
+    margin: 20px 0px;
+
 }
 #Endereco{
     font-size: 12px;
@@ -120,7 +120,7 @@ ul:hover > a{
         padding: 20px;
     }
     section{
-        width: 90%;
+        max-width: 320px;
         max-width: 360px;
         height: auto;
         margin: 12px auto;
