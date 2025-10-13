@@ -52,11 +52,16 @@ section:hover{
 section.Batmansessao{
     font-size: 24px;
     font-weight: 700;
-    color: #000000;
+    color: #f1f1f1;
     background-color: #000; 
     transition: all 1s ease;
     z-index: 0;
-}
+    background-image: url("imagens/fotos do portifólio/245865.png");
+    background-repeat: no-repeat;
+    background-size: cover;           /* cobre toda a área, evita fundo aparecendo */
+    background-position: center top;  /* ajuste o foco vertical/horizontal conforme a imagem */
+    background-attachment: scroll;   
+    }
 
 section.Batmansessao:hover{
     box-shadow: 0 0px 20px rgba(189, 1, 1, 0.712);
@@ -64,6 +69,7 @@ section.Batmansessao:hover{
     transition: all 0.5s ease; 
     background-image: url(/imagens/fotosdoportifólio/245865.png);
     z-index: 1;
+    color: #000;
     background-position: 100% 63%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -232,6 +238,42 @@ a img.voltar:hover{
 /* Responsividade mínima */
 @media (max-width: 1024px){
     section{width: 320px}
+
+    section:hover span{
+        opacity: 1;
+        text-align: center;
+        pointer-events: auto;
+        transition-delay: 0.4s;
+        text-align: center;
+            section:hover span{
+            opacity: 1;
+            text-align: center;
+            pointer-events: auto;
+            transition-delay: 0.4s;
+            text-align: center;
+    }
+    section.carros button{
+        margin-top: 70px;
+    }
+     span.receitas button{
+        margin-top: 40px;
+    }
+
+    span.spanquiz button{
+        margin-top: 20px;
+    }
+
+    span.receitas, span.carrospan{
+        margin-left: 6px;
+    }
+
+    span.spanquiz{
+        margin: auto;
+    }
+
+
+}
+
 }
 
 @media (max-width: 768px) {
@@ -261,6 +303,12 @@ a img.voltar:hover{
     section.Batmansessao:hover{
     background-position: 100% 53%;
 }
+    section.Batmansessao.is-active,
+    section.Batmansessao:hover {
+    background-image: url("imagens/fotos do portifólio/245865.png");
+    background-size: cover;
+    background-position: center center;
+    }
     section.Batmansessao:hover span button{
     width: 80px;
     height:40px;
@@ -273,6 +321,13 @@ a img.voltar:hover{
     font-weight: 400;
     padding: 0px;
     }
+     
+  section.Batmansessao {
+    background-size: cover;       /* mantém cover (esconde áreas vazias) */
+    min-height: 220px;   
+    background-position: 70% 30%;         /* garante espaço visível para a imagem */
+  }
+}
 
     section{
         width: 85%;
@@ -315,6 +370,7 @@ a img.voltar:hover{
         margin-right: 14px;
         right: 0px;
     }
+
       section.is-active span {
     opacity: 1;
     transform: translateY(0);
@@ -341,4 +397,3 @@ a img.voltar:hover{
         position: absolute;
         
     }
-}
