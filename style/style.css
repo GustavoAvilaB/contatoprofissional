@@ -15,23 +15,27 @@ body {
 }
 
 main{
-    background-color: #141414;
-    color: white;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+background-color: #141414;
+color: white;
+width: 100vw;
+min-height: 100vh;
+display: flex; 
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 24px 12px; 
 }
 
 section{
     text-align: center;
-    padding: 20px 50px;
+    padding: 20px 30px;
     border-radius: 20px;
     background-color: #1F1F1F;
     height: auto;
-    width: 380px;
-    position: absolute;
+    max-width: 23rem;
+    width: min(420px, 90%); 
+    margin: 40px auto; 
+    box-sizing: border-box;
 }
 section > p.texto{
     font-size: 12px;
@@ -40,12 +44,12 @@ section > p.texto{
 }
 
 img{
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-top: 20px;
-    margin-bottom: 20px;
+width: clamp(64px, 18vw, 90px);
+height: clamp(64px, 18vw, 90px);
+border-radius: 50%;
+object-fit: cover;
+margin-top: 20px;
+margin-bottom: 20px;
 }
 
 p{
@@ -56,8 +60,10 @@ p{
     font-size: 13px;
     font-weight: 600;
     color: hsl(0, 0%, 70%);
-
     bottom: 1px;
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
 }
 
 #Nome{
@@ -80,11 +86,11 @@ ul{
 ul li{
     border-radius: 10px;
     font-size: 13px;
-    margin: 10px auto;
+    margin: 10px 0;
     background-color: hsl(0, 0%, 20%);
     color: hsl(0, 0%, 12%);
     padding: 14px;
-    margin-top: auto;
+    width: 100%;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -105,4 +111,60 @@ ul:hover > a{
     text-decoration: none;
     color: hsl(0, 0%, 12%);
     transition: 0.5s color ease;
+}
+
+@media (max-width: 500px) {
+    main{
+        width: 100vw;
+    }
+    section{
+        width: 90%;
+        max-width: 360px;
+        height: auto;
+        margin: 12px auto;
+        padding: 16px;
+    }
+    section > p.texto{
+    font-size: 11px;
+    margin: 24px 0px 0px 0px;
+    color: rgb(185, 185, 185);
+}
+
+    ul{
+        height: 100%;
+        width: 94%;
+        padding: 0;
+         
+    }
+    img{
+    width: clamp(56px, 18vw, 80px);
+    height: clamp(56px, 18vw, 80px);
+}
+}
+@media (max-width: 375px) {
+section{
+width: 95%;
+padding: 14px;
+margin: 10px auto;
+}
+#Email{
+    display: block;
+}
+#Nome{
+    margin-top: 20px;
+font-size: 18px;
+}
+section > p.texto{
+font-size: 11px;
+}
+ul li{
+padding: 12px;
+font-size: 14px;
+}
+img{
+width: 69px;
+height: 69px;
+display: block;
+margin: auto;
+}
 }
