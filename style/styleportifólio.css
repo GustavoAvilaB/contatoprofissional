@@ -252,7 +252,7 @@ a img.voltar:hover{
     }
 }
 
-@media (max-width: 450px){
+@media (max-width: 500px){
 
     main{
         height: 60%;
