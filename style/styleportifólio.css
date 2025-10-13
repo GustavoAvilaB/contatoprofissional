@@ -134,7 +134,7 @@ span.receitas, span.carrospan, .spanquiz{
     align-items: center;
     box-sizing: border-box;
     padding: 0;
-
+    margin: 20px;
 }
 /*SESSAO DO QUIZ*/
  section.quiz{
@@ -229,7 +229,10 @@ a img.voltar:hover{
 
 /* Responsividade mínima */
 @media (max-width: 1024px){
-    section{width: 320px}
+    section{
+        width: 320px;
+        margin-bottom: 20px;
+    }
 
     section:hover span{
         opacity: 1;
@@ -252,12 +255,9 @@ a img.voltar:hover{
     span.receitas, span.carrospan{
         margin-left: 6px;
     }
-
-    span.spanquiz{
-        margin: auto;
-    }
-
-
+    span.receitas, span.carrospan, span.spanquiz{
+        margin: 0px 50px;
+ }
 }
 
 @media (max-width: 768px) {
@@ -308,7 +308,7 @@ a img.voltar:hover{
     opacity: 0;
     transition: all 1s ease;
   }
-}
+
 
     section{
         width: 85%;
@@ -316,7 +316,6 @@ a img.voltar:hover{
         transition: all 1s ease;
         transition-delay: 100ms;
         border-radius: 5px;
-        
     }
     section span {
             opacity: 0;
@@ -345,11 +344,14 @@ a img.voltar:hover{
 
     span.receitas, span.carrospan{
         margin-left: 6px;
+        margin: 20px;
     }
 
     span.spanquiz{
         margin-right: 14px;
         right: 0px;
+        margin: 20px;
+        
     }
 
       section.is-active span {
@@ -374,3 +376,4 @@ a img.voltar:hover{
         width: 90%;
         height: 500px;
     }
+}
