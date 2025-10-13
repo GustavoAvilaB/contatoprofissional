@@ -56,7 +56,7 @@ section.Batmansessao{
     background-color: #000; 
     transition: all 1s ease;
     z-index: 0;
-    background-image: url("imagens/fotos do portifólio/245865.png");
+    background-image: url("..//imagens/fotosdoportifólio/245865.png");
     background-repeat: no-repeat;
     background-size: cover;           /* cobre toda a área, evita fundo aparecendo */
     background-position: center top;  /* ajuste o foco vertical/horizontal conforme a imagem */
@@ -67,7 +67,7 @@ section.Batmansessao:hover{
     box-shadow: 0 0px 20px rgba(189, 1, 1, 0.712);
     background-color: rgb(150, 0, 0);
     transition: all 0.5s ease; 
-    background-image: url(/imagens/fotosdoportifólio/245865.png);
+    background-image: url(..//imagens/fotosdoportifólio/245865.png);
     z-index: 1;
     color: #000;
     background-position: 100% 63%;
@@ -304,7 +304,7 @@ a img.voltar:hover{
     background-size: cover;       /* mantém cover (esconde áreas vazias) */
     min-height: 220px;   
     background-position: 70% 30%;
-    background-image: url("imagens/fotosdoportifólio/245865.png");
+    background-image: url("..//imagens/fotosdoportifólio/245865.png");
     opacity: 0;
     transition: all 1s ease;
   }
