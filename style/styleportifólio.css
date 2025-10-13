@@ -31,10 +31,13 @@ section{
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flexbox;
+    display: flex; /* corrigido: antes estava 'flexbox' inválido */
+    flex-direction: column;
+    justify-content: flex-start;
     position: relative;
     transition: all 1s ease;
     text-align: justify;
+    box-sizing: border-box;
 }
 
 
@@ -49,9 +52,10 @@ section:hover{
 section.Batmansessao{
     font-size: 24px;
     font-weight: 700;
-    color: #8D9AA6;
+    color: #000000;
     background-color: #000; 
     transition: all 1s ease;
+    z-index: 0;
 }
 
 section.Batmansessao:hover{
@@ -67,17 +71,20 @@ section.Batmansessao:hover{
 
 section.Batmansessao span{
     display: flex;
-    width: 100%;
+    /* limitar largura para evitar overflow horizontal que empurra o span para fora da tela */
+    width: calc(100% - 32px);
+    max-width: calc(100% - 32px);
     font-size: 16px;
     font-weight: 500;
     justify-content: center;
     align-content: flex-end;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     bottom: 25px;
     gap: 20px;
     align-items: center;
+    box-sizing: border-box;
+    padding: 0 16px;
+    text-shadow:0px 0px 20px #000;
 }
 /*SESSAO DAS RECEITAS*/
 section.receitassessao{
@@ -114,14 +121,14 @@ section.carros:hover{
 }
 
 span.receitas, span.carrospan, .spanquiz{
-    display: flex;
     justify-content: center;
-    padding: 25px;
-    margin: auto;
+    align-content: flex-end;
+    position: absolute;
+    bottom: 25px;
     align-items: center;
-    text-align: center;
-    gap: 15px;
-    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0;
+
 }
 /*SESSAO DO QUIZ*/
  section.quiz{
@@ -147,6 +154,13 @@ span.receitas, span.carrospan, .spanquiz{
  section.quiz:hover{
     box-shadow: 0px 0px 20px #CCD595;
  }
+ /*SPAN DOS SECTIONS*/
+ section span {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .28s ease, transform .28s ease;
+  pointer-events: auto; /* garante que botões dentro possam ser clicados */
+}
 
 span p {
     width: 16rem;
@@ -191,7 +205,6 @@ section img{
     height: 50%;
     margin-bottom: 20px;
     object-fit: cover;
-    border-radius:10px 10px 0 0;
 }
 
 a img.voltar{
@@ -204,8 +217,7 @@ a img.voltar{
         height: 25px;
         margin-right: 40px;
         position: absolute;
-        display: flex;
-        justify-content: space-between;
+        display: block;
         z-index: 3;
         transform: rotate(-180deg);
         transition: all 1s ease;
@@ -242,29 +254,91 @@ a img.voltar:hover{
 
 @media (max-width: 450px){
 
+    main{
+        height: 60%;
+        width: 100%;
+    }
     section.Batmansessao:hover{
     background-position: 100% 53%;
 }
-
+    section.Batmansessao:hover span button{
+    width: 80px;
+    height:40px;
+    padding: 0px;
+    font-size: 14px;   
+}
+    section.Batmansessao:hover span {
+    font-size: 13px;
+    text-shadow:0px 0px 20px #000;
+    font-weight: 400;
+    padding: 0px;
+    }
 
     section{
         width: 85%;
-        height: auto;
-        font-size: 20px;
+        height: 180px;
         transition: all 1s ease;
         transition-delay: 100ms;
-    }
-    section:hover{
-        width: 87%;
-        height: 580px;
+        border-radius: 5px;
         
+    }
+    section span {
+            opacity: 0;
+            transform: translateY(8px);
+            pointer-events: none;
+            padding: 0px 15px;
+        }
+
+    section:hover span{
+            opacity: 1;
+            text-align: center;
+            pointer-events: auto;
+            transition-delay: 0.4s;
+            text-align: center;
+    }
+    section.carros button{
+        margin-top: 70px;
+    }
+     span.receitas button{
+        margin-top: 40px;
+    }
+
+    span.spanquiz button{
+        margin-top: 20px;
+    }
+
+    span.receitas, span.carrospan{
+        margin-left: 6px;
+    }
+
+    span.spanquiz{
+        margin-right: 14px;
+        right: 0px;
+    }
+      section.is-active span {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    text-align: center;
+    margin: auto;
+  }
+  section.is-active{
+        width: 90%;
+        height: 500px;
+  }
+    section img{
+        width: 100%;
+        height: 200px;
+        border-radius: 3px;
+    }
+ 
+    section:hover{
+        width: 90%;
+        height: 500px;
     }
 
     section img{
-        position: cover;
-    }
-
-    section span{
-        margin: 50px 0px 0 0;
+        position: absolute;
+        
     }
 }
