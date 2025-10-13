@@ -55,12 +55,6 @@ section.Batmansessao{
     color: #f1f1f1;
     background-color: #000; 
     transition: all 1s ease;
-    z-index: 0;
-    background-image: url("..//imagens/fotosdoportifólio/245865.png");
-    background-repeat: no-repeat;
-    background-size: cover;           /* cobre toda a área, evita fundo aparecendo */
-    background-position: center top;  /* ajuste o foco vertical/horizontal conforme a imagem */
-    background-attachment: scroll;   
     }
 
 section.Batmansessao:hover{
@@ -173,12 +167,24 @@ section.receitassessao, section.carros, span.spanquiz, .batmanspan .texto{
     transition-duration: 1s;
     
 }
-span button{
+span.spanquiz button, span.carrospan button, span.receitas button{
     padding: 14px 25px;
     border: none;
     border-radius: 5px;
     font-size: 0.8rem;
     background-color: #000B0D;
+    color: #fff;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+span.batmanspan button{
+    border: none;
+    width: 80px;
+    height: 40px;
+    margin: auto;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    background-color: #001a1f;
     color: #fff;
     transition: all 1s ease;
     cursor: pointer;
@@ -203,6 +209,7 @@ section img{
     height: 50%;
     margin-bottom: 20px;
     object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
 }
 
 a img.voltar{
