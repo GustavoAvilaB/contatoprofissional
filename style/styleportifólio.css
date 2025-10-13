@@ -8,7 +8,6 @@
     margin: 0;
     text-decoration: none;
     list-style: none;
-    font-family: 'Outfit', 'Inter', Arial, Helvetica, sans-serif;
 }
 
 main{
@@ -52,6 +51,7 @@ section:hover{
 section.Batmansessao{
     font-size: 24px;
     font-weight: 700;
+    padding: 0px 5px;
     color: #f1f1f1;
     background-color: #000; 
     transition: all 1s ease;
@@ -65,26 +65,32 @@ section.Batmansessao:hover{
     z-index: 1;
     color: #000;
     background-position: 100% 63%;
+    padding: 0px;
     background-repeat: no-repeat;
     background-size: contain;
+}
+section.Batmansessao:hover span{
+    text-shadow: 0px 0px 20px #000000;
+    text-size-adjust: inherit;
 }
 
 section.Batmansessao span{
     display: flex;
     /* limitar largura para evitar overflow horizontal que empurra o span para fora da tela */
-    width: calc(100% - 32px);
-    max-width: calc(100% - 32px);
+    width: calc(100% - 22px);
+    max-width: calc(100% - 22px);
     font-size: 16px;
     font-weight: 500;
     justify-content: center;
     align-content: flex-end;
     position: absolute;
+    align-items: center;
     bottom: 25px;
     gap: 20px;
     align-items: center;
     box-sizing: border-box;
     padding: 0 16px;
-    text-shadow:0px 0px 20px #000;
+    text-shadow:0px 0px 20px #ffffff;
 }
 /*SESSAO DAS RECEITAS*/
 section.receitassessao{
@@ -291,8 +297,9 @@ a img.voltar:hover{
         height: 60%;
         width: 100%;
     }
-    section.Batmansessao:hover{
+    section.Batmansessao:hover, section.Batmansessao.is-active{
     background-position: 100% 53%;
+    font-size: 900px;
 }
     section.Batmansessao.is-active,section.Batmansessao:hover span button{
     width: 80px;
@@ -300,13 +307,17 @@ a img.voltar:hover{
     padding: 0px;
     font-size: 14px;   
 }
-    section.Batmansessao:hover span {
-    font-size: 13px;
-    text-shadow:0px 0px 20px #000;
-    font-weight: 400;
-    padding: 0px;
+    section.Batmansessao:hover span, section.Batmansessao.is-active span {
+    font-size: 0.014em;
+    height: 140px;
+    font-family: 'Inter';
+    text-shadow:0px 0px 20px #880000;
+    font-weight: 700;
+    padding: 5px;
     }
-     
+      section.Batmansessao{
+        padding: 0;
+      }
   section.Batmansessao.is-active {
     background-size: cover;       /* mantém cover (esconde áreas vazias) */
     min-height: 220px;   
