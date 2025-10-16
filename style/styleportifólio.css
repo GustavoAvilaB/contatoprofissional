@@ -61,7 +61,7 @@ section.Batmansessao:hover{
     box-shadow: 0 0px 20px rgba(189, 1, 1, 0.712);
     background-color: rgb(150, 0, 0);
     transition: all 0.5s ease; 
-    background-image: url(..//imagens/fotosdoportifólio/245865.png);
+    background-image: url(../imagens/fotosdoportifólio/245865.png);
     z-index: 1;
     color: #000;
     background-position: 100% 63%;
@@ -308,7 +308,7 @@ a img.voltar:hover{
     font-size: 14px;   
 }
     section.Batmansessao:hover span, section.Batmansessao.is-active span {
-    font-size: 0.014em;
+    font-size: 0.87rem;
     height: 140px;
     font-family: 'Inter';
     text-shadow:0px 0px 20px #880000;
@@ -319,11 +319,9 @@ a img.voltar:hover{
         padding: 0;
       }
   section.Batmansessao.is-active {
-    background-size: cover;       /* mantém cover (esconde áreas vazias) */
-    min-height: 220px;   
+    background-size: cover;       /* mantém cover (esconde áreas vazias) */  
     background-position: 70% 30%;
-    background-image: url("..//imagens/fotosdoportifólio/245865.png");
-    opacity: 0;
+    background-image: url("../imagens/fotosdoportifólio/245865.png");
     transition: all 1s ease;
   }
 
@@ -372,7 +370,7 @@ a img.voltar:hover{
         
     }
 
-      section.is-active span {
+    section.is-active span {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
